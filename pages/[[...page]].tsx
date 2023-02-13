@@ -5,6 +5,7 @@ import DefaultErrorPage from 'next/error'
 import Head from 'next/head'
 import "../components/SvgComponent";
 import "../components/Heading";
+import "../components/ObjectComponent";
 
 // tells you what paths are being built
 export async function getStaticProps({
@@ -21,8 +22,6 @@ export async function getStaticProps({
         },
       })
       .toPromise()) || null
-
-  console.log('fetched on server: ', page.data.blocks[1].children[0].component.options.symbol.content)
 
   return {
     props: {
